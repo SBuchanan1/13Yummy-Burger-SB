@@ -12,18 +12,18 @@ var connection = require("../config/connection.js");
 // The above helper function loops through and creates an array of question marks - ["?", "?", "?"] - and turns it into a string.
 // ["?", "?", "?"].toString() => "?,?,?";
 function printQuestionMarks(num) {
-  var arr = [];
+  var chowdown = [];
 
   for (var i = 0; i < num; i++) {
-    arr.push("?");
+    chowdown.push("?");
   }
 
-  return arr.toString();
+  return chowdown.toString();
 }
 
 // Helper function to convert object key/value pairs to SQL syntax
 function objToSql(ob) {
-  var arr = [];
+  var chowdown = [];
 
   // loop through the keys and push the key/value as a string int arr
   for (var key in ob) {
@@ -36,12 +36,12 @@ function objToSql(ob) {
       }
       // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
       // e.g. {sleepy: true} => ["sleepy=true"]
-      arr.push(key + "=" + value);
+      chowdown.push(key + "=" + value);
     }
   }
 
   // translate array of strings to a single comma-separated string
-  return arr.toString();
+  return chowdown.toString();
 }
 
 // Object for all our SQL statement functions.
