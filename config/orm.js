@@ -36,7 +36,7 @@ const orm = {
       cb(result);
     });
   },
-  // An example of objColVals would be {burger_name: Good Burger, devoured: true}
+
   updateOne: function (id, cb) {
     let queryString = "UPDATE burgers SET devoured=true WHERE id = ?";
 
